@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="getSystemSetting_MaxId">
+        select * from SystemSetting
+        where rowid in (select max(rowid)
+        from SystemSetting)
+    </string>
+
+     <string name="getConfig_MaxId">
+        select * from Config
+        where rowid in (select max(rowid)
+        from Config)
+    </string>
+
+    <string name="getPlayList">
+        select * from PlayPlan p
+        where p.Type=\'mp4\'
+        order by p.PlayOrder asc
+    </string>
+
+    <string name="getImageList">
+        select * from PlayPlan p
+        where p.Type=\'jpg\' or p.Type=\'图片\'
+        order by p.PlayOrder asc
+    </string>
+
+    <string name="getPls_SQL">
+
+    </string>
+
+</resources>

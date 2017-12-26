@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="play_one" type="id" />
+    <item name="play_two" type="id" />
+    <item name="play_three" type="id" />
+    <item name="play_four" type="id" />
+
+    <item name="img_one" type="id" />
+    <item name="img_two" type="id" />
+    <item name="img_three" type="id" />
+    <item name="img_four" type="id" />
+
+    <item name="wv_one" type="id" />
+    <item name="wv_two" type="id" />
+    <item name="wv_three" type="id" />
+    <item name="wv_four" type="id" />
+</resources>

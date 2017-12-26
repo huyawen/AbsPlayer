@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorHint">#999999</color>
+    <color name="colorHintBackground">#2f2f2f</color>
+    <color name="colorBalck">#000000</color>
+    <color name="colorHintBalck">#aa000000</color>
+    <color name="colorTextblack">#323232</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorGary">#b8b8b8</color>
+    <color name="colorBlue">#1aa1e3</color>
+    <color name="dim_foreground_dark">#bebebe</color>
+    <color name="alertTitleColor">#0089e1</color><!--alertDialog的标题颜色-->
+    <color name="alertTextContent">#666666</color>   <!--alertDialog的文本颜色-->
+    <color name="color_double_white">#eeeeee</color><!--偶数行颜色-->
+    <color name="color_white">#ffffff</color>
+    <color name="transparent">#0000</color>
+    <color name="topbar_3">#339EFE</color>
+    <color name="background">#aa89beb2</color>
+    <color name="line">#dddddd</color>
+    <color name="text_hint">#333333</color>
+    <color name="color_ablue">#ee0089e1</color>
+    <color name="edit_hint">#03A9F4</color>
+    <color name="qqq">#0A0A0A</color>
+</resources>

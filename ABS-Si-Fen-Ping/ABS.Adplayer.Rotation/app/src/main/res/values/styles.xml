@@ -1,0 +1,73 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <!--自定义toast的动画-->
+    <style name="custom.animation.toast" parent="@android:style/Animation.Toast">
+        <item name="android:windowEnterAnimation">@anim/toast_enter</item>
+        <item name="android:windowExitAnimation">@anim/toast_exit</item>
+    </style>
+
+    <!--自定义mediaplay的样式-->
+    <style name="MediaButtonCompat">
+        <item name="android:background">@null</item>
+        <item name="android:layout_width">71dip</item>
+        <item name="android:layout_height">52dip</item>
+    </style>
+
+    <style name="MediaButtonCompat.Previous">
+        <item name="android:src">@mipmap/vvc_ic_media_previous</item>
+    </style>
+
+    <style name="MediaButtonCompat.Next">
+        <item name="android:src">@mipmap/vvc_ic_media_next</item>
+    </style>
+
+    <style name="MediaButtonCompat.Play">
+        <item name="android:src">@mipmap/vvc_ic_media_play</item>
+    </style>
+
+    <style name="MediaButtonCompat.Ffwd">
+        <item name="android:src">@mipmap/vvc_ic_media_ff</item>
+    </style>
+
+    <style name="MediaButtonCompat.Rew">
+        <item name="android:src">@mipmap/vvc_ic_media_rew</item>
+    </style>
+
+    <style name="MediaButtonCompat.Pause">
+        <item name="android:src">@mipmap/vvc_ic_media_pause</item>
+    </style>
+
+    <!-- 自定义加载视频的 dialog -->
+    <style name="loading_dialog" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>       <!-- Dialog的windowFrame框为无 -->
+        <item name="android:windowBackground">@color/transparent</item> <!-- 设置dialog的背景 -->
+        <item name="android:windowNoTitle">true</item>      <!-- 是否显示title -->
+        <item name="android:windowIsTranslucent">false</item>    <!-- 是否半透明 -->
+        <item name="android:windowIsFloating">true</item>       <!-- 是否浮现在activity之上 -->
+        <item name="android:windowContentOverlay">@null</item>  <!-- 也是个drawable，定义contentoverlay的背景 -->
+        <item name="android:backgroundDimEnabled">true</item>  <!-- 背景是否模糊显示 -->
+    </style>
+
+
+    <!--二维码图片放大的弹窗-->
+    <style name="AcitvityDialog" parent="android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar">
+        <item name="android:windowBackground">@color/transparent</item> <!-- 设置dialog的背景 -->
+        <item name="android:windowIsTranslucent">true</item>    <!-- 是否半透明 -->
+        <item name="android:backgroundDimEnabled">true</item>
+
+    </style>
+    <style name="DialogAnimation" parent="android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar">
+        <item name="android:windowEnterAnimation">@anim/home_img_in</item>
+        <item name="android:windowExitAnimation">@anim/home_bg_out</item>
+    </style>
+
+</resources>

@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context="com.meiaomei.absadplayerrotation.activity.SetActivity">
+
+    <TextView
+        android:id="@+id/tv_sysSet"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="0.5"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="系统设置"
+        android:textColor="@color/colorTextblack" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_weight="1"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="clip_horizontal"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_ipName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/tv_durationName"
+                android:layout_marginLeft="15dp"
+                android:text="IP地址:"
+                android:textColor="@color/colorTextblack"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/ed_ipValue"
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_ipName"
+                android:layout_alignTop="@+id/tv_ipName"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/tv_ipName"
+                android:background="@drawable/square"
+                android:digits="0123456789."
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/colorTextblack"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_durationName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_ipName"
+                android:layout_marginTop="15dp"
+                android:text="心跳时长:"
+                android:textColor="@color/colorTextblack"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/ed_durationValue"
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_durationName"
+                android:layout_alignRight="@+id/ed_ipValue"
+                android:layout_alignTop="@+id/tv_durationName"
+                android:layout_below="@+id/ed_ipValue"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/tv_durationName"
+                android:background="@drawable/square"
+                android:digits="0123456789"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/colorTextblack"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_durationName"
+                android:layout_marginTop="15dp"
+                android:text="图片时长:"
+                android:textColor="@color/colorTextblack"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/ed_img_time"
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_img"
+                android:layout_alignRight="@+id/ed_ipValue"
+                android:layout_alignTop="@+id/tv_img"
+                android:layout_below="@+id/ed_ipValue"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/tv_img"
+                android:background="@drawable/square"
+                android:digits="0123456789"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/colorTextblack"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_portName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/tv_seeMacName"
+                android:layout_marginLeft="15dp"
+                android:text="端口:"
+                android:textColor="@color/colorTextblack"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/ed_portValue"
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tv_portName"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/tv_portName"
+                android:background="@drawable/square"
+                android:digits="0123456789."
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/colorTextblack"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_seeMacName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_portName"
+                android:layout_marginTop="15dp"
+                android:text="mac地址:"
+                android:textColor="@color/colorTextblack"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/ed_macAddress"
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_seeMacName"
+                android:layout_alignRight="@+id/ed_portValue"
+                android:layout_alignTop="@+id/tv_seeMacName"
+                android:layout_below="@+id/ed_portValue"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/tv_seeMacName"
+                android:background="@drawable/square"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/colorTextblack"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_img_cnt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_seeMacName"
+                android:layout_marginTop="15dp"
+                android:text="图片频次:"
+                android:textColor="@color/colorTextblack"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/ed_img_cnt"
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_img_cnt"
+                android:layout_alignRight="@+id/ed_macAddress"
+                android:layout_alignTop="@+id/tv_img_cnt"
+                android:layout_below="@+id/ed_macAddress"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/tv_img_cnt"
+                android:background="@drawable/square"
+                android:digits="0123456789"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/colorTextblack"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_done"
+        android:layout_width="76dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/bt_select"
+        android:text="确定"
+        android:textColor="@color/color_white" />
+
+    <TextView
+        android:id="@+id/tv_macInfo"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="0.5"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="设置信息"
+        android:textColor="@color/colorTextblack" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_marginLeft="40dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_ipAddressF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/tv_userName"
+                android:layout_marginLeft="15dp"
+                android:text="IP地址:"
+                android:textColor="@color/colorTextblack"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_show_ip"
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_ipAddressF"
+                android:layout_alignTop="@+id/tv_ipAddressF"
+                android:layout_toRightOf="@+id/tv_ipAddressF"
+                android:gravity="center_vertical"
+                android:paddingLeft="2dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/colorTextblack"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_ipAddressF"
+                android:layout_marginTop="15dp"
+                android:text="心跳时长:"
+                android:textColor="@color/colorTextblack"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_show_heart"
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_userName"
+                android:layout_alignRight="@+id/tv_show_ip"
+                android:layout_alignTop="@+id/tv_userName"
+                android:layout_below="@+id/tv_show_ip"
+                android:layout_toRightOf="@+id/tv_userName"
+                android:gravity="center_vertical"
+                android:paddingLeft="2dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/colorTextblack"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_show_img_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_userName"
+                android:layout_marginTop="15dp"
+                android:text="图片时长:"
+                android:textColor="@color/colorTextblack"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_show_img"
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_show_img_name"
+                android:layout_alignRight="@+id/tv_show_heart"
+                android:layout_alignTop="@+id/tv_show_img_name"
+                android:layout_below="@+id/tv_show_heart"
+                android:layout_toRightOf="@+id/tv_show_img_name"
+                android:digits="0123456789"
+                android:gravity="center_vertical"
+                android:paddingLeft="2dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/colorTextblack"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_portNameF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/tv_userPsd"
+                android:layout_marginLeft="15dp"
+                android:text="端口:"
+                android:textColor="@color/colorTextblack"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_show_port"
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tv_portNameF"
+                android:layout_toRightOf="@+id/tv_portNameF"
+                android:gravity="center_vertical"
+                android:paddingLeft="2dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/colorTextblack"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_userPsd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_portNameF"
+                android:layout_marginTop="15dp"
+                android:text="mac地址:"
+                android:textColor="@color/colorTextblack"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_show_mac"
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_userPsd"
+                android:layout_alignTop="@+id/tv_userPsd"
+                android:layout_below="@+id/tv_show_port"
+                android:layout_toRightOf="@+id/tv_userPsd"
+                android:gravity="center_vertical"
+                android:paddingLeft="2dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/colorTextblack"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_img_cnt_show_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_userPsd"
+                android:layout_marginTop="15dp"
+                android:text="图片频次:"
+                android:textColor="@color/colorTextblack"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_img_cnt_show"
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_img_cnt_show_name"
+                android:layout_alignRight="@+id/tv_show_mac"
+                android:layout_alignTop="@+id/tv_img_cnt_show_name"
+                android:layout_below="@+id/tv_show_mac"
+                android:layout_toRightOf="@+id/tv_img_cnt_show_name"
+                android:digits="0123456789"
+                android:gravity="center_vertical"
+                android:paddingLeft="2dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/colorTextblack"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_next"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/bt_select"
+        android:text="进入播放界面"
+        android:textColor="@color/color_white" />
+</LinearLayout>

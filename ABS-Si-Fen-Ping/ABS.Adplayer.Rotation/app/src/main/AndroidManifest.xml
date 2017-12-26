@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.meiaomei.absadplayerrotation"
+    >
+    <!--android:sharedUserId="android.uid.shell"-->
+    <!-- 通用权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 使用wifi的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 开机自启动的权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 反射ip地址的权限 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!--修改时间的权限-->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+
+    <application
+        android:name=".AbsPlbsApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+        <activity
+            android:name=".activity.MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified"></activity>
+        <activity
+            android:name=".activity.SetActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified">
+        </activity>
+
+        <activity android:name=".activity.LoginActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 开机自启动应用的广播 -->
+        <receiver android:name=".broadcastreceiver.BootBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 自动关机的广播 -->
+        <receiver android:name=".broadcastreceiver.AlarmBroadcastReciver">
+            <intent-filter>
+                <action android:name="com.abs.plbs" />
+            </intent-filter>
+        </receiver>
+
+        <!--更新，卸载，添加apk的广播-->
+        <receiver android:name=".broadcastreceiver.UpdateReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".service.AutoService" />
+        <service android:name=".service.IntoAppService" />
+
+    </application>
+
+</manifest>
